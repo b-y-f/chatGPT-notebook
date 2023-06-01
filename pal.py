@@ -112,13 +112,11 @@ def solution():
     result = trees_added
     return result
 
-Q: {question}
-
-# solution in Python:
+Q: {text}
 '''.strip()
 
 
-MATH_CHAT_BETA_PROMPT = '''
+MATH_PROMPT2 = '''
 Let's use python to solve math problems. Here are three examples how to do it,
 Q: Olivia has $23. She bought five bagels for $3 each. How much money does she have left?
 ```
@@ -159,7 +157,7 @@ def solution():
 ```
 
 How about this question?
-Q: {question}
+Q: {text}
 '''.strip()
 
 
@@ -249,7 +247,7 @@ answer = second_penguin_name
 
 
 """
-{question}
+Q: {text}
 """
 '''.strip() + '\n'
 
@@ -267,8 +265,6 @@ def solution():
         result.extend(tmp)
     return " ".join(result)
 
-
-
 Q: ask a group of insects in what family? four times. after the fourth time say The happy family
 A:
 def solution():
@@ -281,8 +277,6 @@ def solution():
     result.extend(tmp)
     return " ".join(result)
 
-
-
 Q: Repeat the word duck four times, but halfway through also say quack
 A:
 def solution():
@@ -293,8 +287,6 @@ def solution():
         if i == 2:
             result.append("quack")
     return " ".join(result)
-
-
 
 Q: Print boolean eleven times, but after the 3rd and 8th also say correct
 A:
@@ -307,9 +299,7 @@ def solution():
             result.append("correct")
     return " ".join(result)
 
-
-
-Q: {question}
+Q: {text}
 '''.strip() + '\n\n'
 
 
@@ -397,7 +387,7 @@ def solution():
 
 
 
-Q: {question}
+Q: {text}
 
 # solution using Python:
 '''.strip() + '\n\n'
