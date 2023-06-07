@@ -258,7 +258,6 @@ ALGO_PROMPT = '''
 Q: say java twice and data once, and then repeat all of this three times.
 A:
 def solution():
-    """Q: say java twice and data once, and then repeat all of this three times."""
     result = []
     tmp = ["java", "java", "data"]
     for i in range(3):
@@ -268,7 +267,6 @@ def solution():
 Q: ask a group of insects in what family? four times. after the fourth time say The happy family
 A:
 def solution():
-    """Q: ask a group of insects in what family? four times. after the fourth time say The happy family"""
     result = []
     tmp = []
     for i in range(1, 5):
@@ -280,7 +278,6 @@ def solution():
 Q: Repeat the word duck four times, but halfway through also say quack
 A:
 def solution():
-    """Q: Repeat the word duck four times, but halfway through also say quack"""
     result = []
     for i in range(1, 5):
         result.append("duck")
@@ -291,7 +288,6 @@ def solution():
 Q: Print boolean eleven times, but after the 3rd and 8th also say correct
 A:
 def solution():
-    """Q: Print boolean eleven times, but after the 3rd and 8th also say correct"""
     result = []
     for i in range(1, 12):
         result.append("boolean")
@@ -306,10 +302,8 @@ Q: {text}
 OBJECT_COUNTING_PROMPTING = '''
 Q: I have a drum, a flute, a clarinet, a violin, four accordions, a piano, a trombone, and a trumpet. How many musical instruments do I have?
 
-# solution using Python:
 
-def solution():
-    """Q: I have a drum, a flute, a clarinet, a violin, four accordions, a piano, a trombone, and a trumpet. How many musical instruments do I have?"""
+A:def solution():
     musical_instruments_to_count = {
         'drum': 1,
         'flute': 1,
@@ -327,10 +321,7 @@ def solution():
 
 Q: I have a chair, two ovens, and three tables. How many objects do I have?
 
-# solution using Python:
-
-def solution():
-    """Q: I have a chair, two ovens, and three tables. How many objects do I have?
+A:def solution():
     """
     objects_to_count = {
         'chair': 1,
@@ -344,12 +335,8 @@ def solution():
 
 Q: I have a chair, two potatoes, a cauliflower, a lettuce head, two tables, a cabbage, two onions, and three fridges. How many vegetables do I have?
 
-# solution using Python:
 
-def solution():
-    """Q: I have a chair, two potatoes, a cauliflower, a lettuce head, two tables, a cabbage, two onions, and three fridges. How many vegetables do I have?
-    """
-    # note: I'm not counting the chair, tables, or fridges as vegetables
+A:def solution():
     vegetables_to_count = {
         'potato': 2,
         'cauliflower': 1,
@@ -364,12 +351,7 @@ def solution():
 
 Q: I have a raspberry, a cat, a rabbit, a mouse, a pig, two snails, a fish, two cows, a snake, a goat, and a duck. How many animals do I have?
 
-# solution using Python:
-
-def solution():
-    """Q: I have a raspberry, a cat, a rabbit, a mouse, a pig, two snails, a fish, two cows, a snake, a goat, and a duck. How many animals do I have?
-    """
-    # note: I'm not counting the raspberry as an animal
+A:def solution():
     animals_to_count = {
         'cat': 1,
         'rabbit': 1,
@@ -388,6 +370,4 @@ def solution():
 
 
 Q: {text}
-
-# solution using Python:
 '''.strip() + '\n\n'
